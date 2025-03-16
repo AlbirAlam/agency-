@@ -45,10 +45,16 @@ ul li {
 
 /*=== banner part start ===*/
 
-#banner_part {
-    background: #115cfa;
-    padding: 100px 0 300px 0;
-    text-align: center;
+.banner_bag_img {
+    background: url(../images/main_banner-Photoroom.png) no-repeat ;
+    background-position: right;
+    
+}
+.baner_overlay{
+    background: radial-gradient(circle at right top, rgba(63, 0, 230, 0.36), rgb(127, 0, 253) 100%) !important;
+    padding: 300px 0;
+    background-size: contain;
+   
 }
 
 .banner_img h2 {
@@ -92,11 +98,16 @@ ul li {
 
 /*=== mix-fuliter part end ===*/
 #mix_filter {
+    padding: 50px 0;
     background: #77777721;
 }
 
 .mix-center {
     text-align: center;
+}
+
+.mix_box-detls {
+    padding: 50px 0;
 }
 
 .mix-button {
@@ -116,6 +127,81 @@ ul li {
 }
 
 /*=== mix-fuliter part end ===*/
+
+/* ==============================
+    Gallery Start
+/*================================*/
+
+
+.controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 8px 26px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Inter", serif;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    background-color: transparent
+}
+
+.controls button:hover {
+    background-color: inherit;
+}
+
+/*
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+*/
+
+.gallery-item {
+    /*
+    width: 150px;
+    height: 150px;
+*/
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at right bottom, rgba(63, 0, 230, 0.21), rgba(127, 0, 253, 0.21) 100%);
+    opacity: 0;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover.gallery-item::after {
+    opacity: .7
+}
+
+/* ==============================
+    Gallery End
+/*================================*/
 
 /*=== logo-scroll part start ===*/
 #logo-scroll {
@@ -145,7 +231,7 @@ ul li {
 }
 
 .ceo-box {
-    background: #115cfa;
+    background: radial-gradient(circle at right bottom, rgb(63, 0, 230), rgb(127, 0, 253) 100%);
     color: #fff;
     padding: 100px 50px 50px 50px;
     border-radius: 29px;
@@ -301,12 +387,20 @@ ul li {
     text-align: center;
 }
 
-.news-button button {
-    padding: 10px 30px;
-    border-radius: 20px;
-    font-weight: bold;
+.pagla_btn {
+    color: #fff;
+    letter-spacing: 1px;
+    border-style: none !important;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-weight: 400;
     font-family: "Inter", serif;
+    background: radial-gradient(circle at right bottom, rgb(63, 0, 230), rgb(127, 0, 253) 100%);
 }
+
+
 
 /*== News part end ===*/
 
@@ -1112,62 +1206,4 @@ ul li {
 
 /* ==============================
     Contact page end
-/*================================*/
-
-
-
-
-
-
-/* ==============================
-    Gallery Start
-/*================================*/
-
-
-.controls {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.controls button {
-    margin: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
-    background-color: #eee;
-    border: none;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-}
-
-.controls button:hover {
-    background-color: #ddd;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.gallery-item {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-/* ==============================
-    Gallery End
 /*================================*/
